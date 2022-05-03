@@ -1,0 +1,19 @@
+#homeDiv {
+    background-color: rgba(210, 105, 30, 0.7);
+    padding: 1rem;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+#home {
+    color: rgb(1, 46, 1);
+    font-weight: bold;
+    font-size: large;
+}
+
+#auth-a {
+    text-decoration: none;
+    color: darkgreen;
+}

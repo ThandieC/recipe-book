@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="onToggleNavbarCollapsing()">
+        <span class="navbar-toggler-icon"></span>O
+      </button>
+            <a routerLink="/ " class="navbar-brand">Kitchen<span id="collection">Collection</span></a
+      >
+    </div>
+    <div
+      class="collapse navbar-collapse"
+      [class.collapse]="navbarCollapsed"
+      id="menu"
+    >
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="activated">
+          <a style="cursor: pointer" routerLink="/home">Home</a>
+            </li>
+            <li routerLinkActive="activated">
+                <a style="cursor: pointer" routerLink="/recipes">Recipes</a>
+            </li>
+            <li routerLinkActive="activated">
+                <a style="cursor: pointer" routerLink="/shopping">Shopping Basket</a>
+            </li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="!isAuthenticated">
+                <a class="links" style="cursor: pointer" routerLink="/auth">Login | Signup</a
+        >
+      </li>
+      <li class="dropdown" appDropdown *ngIf="isAuthenticated">
+        <a
+          style="cursor: pointer"
+          class="dropdown-toggle"
+          data-toggle="dropdown"
+          href='target="_self"'
+          >Recipe Book<span class="caret"></span
+        ></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="drop" style="cursor: pointer" (click)="onSaveRecipes()">Save Recipe</a
+            >
+          </li>
+          <hr />
+          <li>
+            <a class="drop" style="cursor: pointer" (click)="onFetchRecipes()"
+              >Fetch Recipes</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li *ngIf="isAuthenticated">
+        <a class="links" style="cursor: pointer" (click)="onLogout()">Logout</a>
+                    </li>
+                </ul>
+    </div>
+</nav>

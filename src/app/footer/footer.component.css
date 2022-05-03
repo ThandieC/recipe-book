@@ -1,0 +1,11 @@
+footer,
+.footNav {
+    background-color: darkgreen;
+    color: wheat;
+    text-align: center;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
