@@ -1,0 +1,14 @@
+.row {
+    background-color: rgba(221, 180, 126, 0.7);
+    padding: 1rem;
+    width: 97%;
+    margin: 1.5% 1.5% 0 1.5%;
+}
+
+#inner {
+    width: fit-content;
+    margin: 0 auto;
+    max-height: 80vh;
+    overflow-x: auto;
+    overflow-y: auto;
+}

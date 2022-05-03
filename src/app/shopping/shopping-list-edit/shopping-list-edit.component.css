@@ -1,0 +1,12 @@
+button {
+    margin: 0.2rem;
+}
+
+#name {
+    width: 60vw;
+    margin-right: 1rem;
+}
+
+#amount {
+    width: 20vw;
+}
