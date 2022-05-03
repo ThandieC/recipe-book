@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <img [src]="displayedRecipe.imageSrc" [alt]="displayedRecipe.name" width="400" height="300" class="img-fluid">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 offset-md-2">
+            <h1>{{displayedRecipe.name}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-8 offset-md-2">
+            {{displayedRecipe.description}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 offset-md-2">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let ingredient of displayedRecipe.ingredients">
+                    {{ingredient.ingrName}} - {{ingredient.ingrAmount}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-8 offset-md-2">
+            <div class="btn-group dropdown" appDropdown>
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href='target="_self"'>
+                Manage Recipe<span class="caret"></span>
+            </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a (click)="shopForIngredients()" style="cursor: pointer;">Send to Shopping Basket</a>
+                    </li>
+                    <li>
+                        <a style="cursor: pointer;" (click)="onEditRecipe()">Edit Recipe</a>
+                    </li>
+                    <li>
+                        <a style="cursor: pointer;" (click)="onDeleteRecipe()">Delete Recipe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

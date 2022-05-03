@@ -1,0 +1,21 @@
+.container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.space {
+    margin-left: 0.7rem;
+}
+
+.gap {
+    margin-top: 0.2rem;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.warning {
+    color: red;
+}
