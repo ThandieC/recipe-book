@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+#body {
+    background-color: darkgreen;
+    overflow: hidden;
+}
+
+.row {
+    background-image: url("../assets/images/food-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+#mainDiv {
+    margin-bottom: 5rem;
+}
